@@ -3,6 +3,8 @@ package com.interviewprep.poker.model;
 import lombok.Getter;
 
 /**
+ * Has a value or {@link CardRank} and belongs to a {@link Suite}
+ *
  * @author Vivek Rao
  */
 @Getter

@@ -7,6 +7,8 @@ import com.interviewprep.poker.model.CoinType;
 import lombok.Getter;
 
 /**
+ * Stores the current state of the game, which is basically the current pot.
+ *
  * @author Vivek Rao
  */
 public class GameState

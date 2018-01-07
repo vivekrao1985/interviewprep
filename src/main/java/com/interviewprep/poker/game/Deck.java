@@ -7,6 +7,8 @@ import com.interviewprep.poker.model.Card;
 import lombok.Getter;
 
 /**
+ * A deck of {@link Card}s.
+ *
  * @author Vivek Rao
  */
 public class Deck
@@ -19,13 +21,20 @@ public class Deck
     public Deck()
     {
         this.cards = new ArrayList<Card>(52);
+        init();
     }
 
+    /*
+     * Shuffle the cards in the deck.
+     */
     public void shuffle()
     {
         this.shuffled = true;
     }
 
+    /*
+     * Get the card at the top of the deck.
+     */
     public Card getCard()
     {
         if (this.shuffled)

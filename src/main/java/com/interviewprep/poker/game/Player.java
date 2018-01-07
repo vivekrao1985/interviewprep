@@ -31,7 +31,7 @@ public class Player
         this.playerPot = initialPot;
     }
 
-    public Turn makeTurn()
+    public Turn makeTurn(final GameState gameState)
     {
         // wait for player to make turn based on current game state
         return null;

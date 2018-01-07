@@ -6,6 +6,8 @@ import java.util.List;
 import com.interviewprep.poker.evaluator.HandEvaluator;
 
 /**
+ * Emulates an instance of a poker game.
+ *
  * @author Vivek Rao
  */
 public class Game
@@ -14,7 +16,6 @@ public class Game
 
     private final Deck deck = new Deck();
 
-    // sort by decreasing order of ranks
     private final List<HandEvaluator> evaluators = new ArrayList<HandEvaluator>();
 
     public Game()
@@ -24,7 +25,8 @@ public class Game
 
     private void setup()
     {
-        // create deck, players and evaluators
+        // create deck, players and evaluators, the latter
+        // sorted by decreasing order of ranks
     }
 
     public void play()
@@ -46,7 +48,7 @@ public class Game
         {
             if (!player.isFold())
             {
-                final Turn turn = player.makeTurn();
+                final Turn turn = player.makeTurn(gameState);
                 if (Turn.TurnType.BET.equals(turn.getTurnType()) && isValidTurn(turn))
                 {
                     gameState.addBet(turn.getBet());
